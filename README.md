@@ -5,3 +5,5 @@ The api used for this project is __https://rickandmortyapi.com/__ and the __@GET
 The modelof this project fetches the Rick and Morty character image, name, species and status. See picture description below.
 
 ## Description
+
+!["Launch View"](screenshot/com.example.rick_n_morty_Screenshot_2021.05.22_00.59.22.png "Screenshot of the app when launc")
