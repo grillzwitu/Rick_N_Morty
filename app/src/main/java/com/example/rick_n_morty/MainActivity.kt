@@ -4,8 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.rick_n_morty.api.CharRepository
 import com.example.rick_n_morty.api.CharacterApi
-import com.example.rick_n_morty.api.CharacterRepository
 import com.example.rick_n_morty.api.Results
 import com.example.rick_n_morty.databinding.ActivityMainBinding
 
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     private val viewModel: MainViewModel by lazy {
         ViewModelProvider(
             this, MainViewModelFactory(
-                CharacterRepository(
+                CharRepository(
                     CharacterApi.apiService
                 )
             )

@@ -8,7 +8,7 @@ import com.example.rick_n_morty.api.Results
 import com.example.rick_n_morty.databinding.CharItemsBinding
 
 
-class MainAdapter(private val characterList: List<Results>) :
+class MainAdapter(private val charList: List<Results>) :
     RecyclerView.Adapter<MainAdapter.CharacterViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterViewHolder {
@@ -20,9 +20,9 @@ class MainAdapter(private val characterList: List<Results>) :
     }
 
     override fun onBindViewHolder(holder: CharacterViewHolder, position: Int) =
-        holder.bind(characterList[position])
+        holder.bind(charList[position])
 
-    override fun getItemCount(): Int = characterList.size
+    override fun getItemCount(): Int = charList.size
 
     inner class CharacterViewHolder(private val binding: CharItemsBinding) :
         RecyclerView.ViewHolder(binding.root) {

@@ -2,13 +2,13 @@ package com.example.rick_n_morty
 
 import android.util.Log
 import androidx.lifecycle.*
-import com.example.rick_n_morty.api.CharacterRepository
+import com.example.rick_n_morty.api.CharRepository
 import com.example.rick_n_morty.api.Results
 import kotlinx.coroutines.launch
 
 const val TAG = "CharacterViewModel"
 
-class MainViewModel(private val characterRepository: CharacterRepository) : ViewModel() {
+class MainViewModel(private val characterRepository: CharRepository) : ViewModel() {
 
     private val _characterLiveData = MutableLiveData<List<Results>>()
     val characterLiveData: LiveData<List<Results>>
@@ -31,7 +31,7 @@ class MainViewModel(private val characterRepository: CharacterRepository) : View
 
 }
 
-class MainViewModelFactory(private val characterRepository: CharacterRepository) :
+class MainViewModelFactory(private val characterRepository: CharRepository) :
     ViewModelProvider.Factory {
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {

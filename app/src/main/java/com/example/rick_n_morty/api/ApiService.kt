@@ -23,10 +23,10 @@ object CharacterApi {
 interface ApiService {
 
     @GET("api/character")
-    suspend fun getCharacters(): CharacterResponse
+    suspend fun getChars(): CharacterResponse
 }
 
-class CharacterRepository(private val apiService: ApiService) {
+class CharRepository(private val apiService: ApiService) {
 
-    suspend fun getCharacters() = apiService.getCharacters()
+    suspend fun getCharacters() = apiService.getChars()
 }
