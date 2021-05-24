@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.rick_n_morty.api.Results
+import com.example.rick_n_morty.api.Response
 import com.example.rick_n_morty.databinding.CharItemsBinding
 
 
-class MainAdapter(private val charList: List<Results>) :
+class MainAdapter(private val charList: List<Response>) :
     RecyclerView.Adapter<MainAdapter.CharacterViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterViewHolder {
@@ -27,7 +27,7 @@ class MainAdapter(private val charList: List<Results>) :
     inner class CharacterViewHolder(private val binding: CharItemsBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(character: Results) {
+        fun bind(character: Response) {
             binding.charImage.load(character.characterImage)
             binding.charName.text = character.characterName
             binding.charStatus.text = character.characterStatus

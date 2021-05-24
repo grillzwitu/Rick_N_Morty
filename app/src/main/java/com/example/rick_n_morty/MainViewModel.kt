@@ -3,15 +3,15 @@ package com.example.rick_n_morty
 import android.util.Log
 import androidx.lifecycle.*
 import com.example.rick_n_morty.api.CharRepository
-import com.example.rick_n_morty.api.Results
+import com.example.rick_n_morty.api.Response
 import kotlinx.coroutines.launch
 
 const val TAG = "CharacterViewModel"
 
 class MainViewModel(private val characterRepository: CharRepository) : ViewModel() {
 
-    private val _characterLiveData = MutableLiveData<List<Results>>()
-    val characterLiveData: LiveData<List<Results>>
+    private val _characterLiveData = MutableLiveData<List<Response>>()
+    val characterLiveData: LiveData<List<Response>>
         get() = _characterLiveData
 
     init {

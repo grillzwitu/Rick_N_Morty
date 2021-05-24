@@ -2,7 +2,7 @@ package com.example.rick_n_morty.api
 
 import com.squareup.moshi.Json
 
-data class Results(
+data class Response(
     @Json(name = "name")
     val characterName: String,
 
@@ -16,4 +16,4 @@ data class Results(
     val characterImage: String,
 )
 
-data class CharacterResponse(val results: List<Results>)
+data class CharacterResponse(val results: List<Response>)

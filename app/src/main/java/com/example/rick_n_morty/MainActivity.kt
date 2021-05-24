@@ -6,13 +6,13 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.rick_n_morty.api.CharRepository
 import com.example.rick_n_morty.api.CharacterApi
-import com.example.rick_n_morty.api.Results
+import com.example.rick_n_morty.api.Response
 import com.example.rick_n_morty.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
-    private val character = mutableListOf<Results>()
+    private lateinit var binding: ActivityMainBinding
+    private val character = mutableListOf<Response>()
 
     private val viewModel: MainViewModel by lazy {
         ViewModelProvider(
